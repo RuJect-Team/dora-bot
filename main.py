@@ -20,7 +20,7 @@ def config_save():
 def add_word(message):
     print("[INPUT] сообщение получено!")
     config_open()
-    if message.reply_to_message != None and message.reply_to_message.from_user.id == 5516081643 or message.chat.id == message.from_user.id:
+    if message.reply_to_message != None and message.reply_to_message.from_user.id == 5516081643 or message.chat.id == message.from_user.id or random.randint(1, 20) == 1:
         bot.reply_to(message, random.choice(database['messages']))
     else:
         for i in swear_db:
